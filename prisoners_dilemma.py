@@ -244,6 +244,9 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
             
             if len(opponent_history)>= 5:
                 return 'b'
+            else:
+                if(size%10==0): 
+                    return 'c'
             
             
     
