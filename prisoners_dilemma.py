@@ -232,7 +232,7 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
         if getting_team_name:
             return 'Gary Auslander of North Dakota'
         else:
-            
+            size = len(history)
             # use history, opponent_history, score, opponent_score
             # to compute your strategy
             if len(opponent_history)==0 or len(opponent_history)==2 or len(opponent_history)==3: #It's the first couple of rounds: Betray
@@ -241,12 +241,11 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
                 return 'c'
             
                 
-            
-            if len(opponent_history)>= 5:
-                return 'b'
-            else:
-                if(size%10==0): 
+            if(size%10==0) and opponent_history[-1]== 'c': 
                     return 'c'
+            else:
+                if len(opponent_history)>= 5:
+                    return 'b'
             
             
     
