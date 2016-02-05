@@ -237,8 +237,13 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
             # to compute your strategy
             if len(opponent_history)==0 or len(opponent_history)==2 or len(opponent_history)==3: #It's the first couple of rounds: Betray
                 return 'b'
-            if len(opponent_history)==1 or len(opponent_history)==4: #See if they have a soft side
+            if len(opponent_history) <=5 and opponent_history[-1] == 'b':
+                return 'b'
+            elif len(opponent_history)==1 or len(opponent_history)==4: #See if they have a soft side
                 return 'c'
+            else:
+                pass
+
             
                 
             if(size%10==0) and opponent_history[-1]== 'c': 
