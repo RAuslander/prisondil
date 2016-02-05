@@ -1,7 +1,6 @@
 from __future__ import print_function
 
-#Names: Ryan Auslander Conner Fabian
-#Date: 2/2/2016
+
 
 
 ''' 
